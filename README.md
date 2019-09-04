@@ -77,7 +77,7 @@ class Simple1Activity : AppCompatActivity() {
 
 ![Activity 有了 Girl](https://user-gold-cdn.xitu.io/2019/9/4/16cfb9fffd93d7bf?w=209&h=357&f=png&s=48053)
 
-看脸都是一个人啊！怎么知道每次都是个新 Gril 呢？直接检查 Gril 的身份证：
+看脸都是一个人啊！怎么知道每次都是个新 Girl 呢？直接检查 Girl 的身份证：
 >System.out: ---->com.joker.koin.model.Girl@a5b751b
 >
 >System.out: ---->com.joker.koin.model.Girl@727e094
@@ -88,7 +88,7 @@ K，原来是3胞胎...
 
 ### single
 
-现在都什么时代了，不能给它享受多个 Gril 啊，那就把 factory 换成 single，动手试试检查 Gril 证件：
+现在都什么时代了，不能给它享受多个 Girl 啊，那就把 factory 换成 single，动手试试检查 Girl 证件：
 ```Kotlin
 val girlModule = module {
     single {
@@ -227,4 +227,6 @@ class Scope2Activity : AppCompatActivity() {
  1. 在 Scope1Activity 创建了 scope1 设置值，并且绑定（bindScope）了范围。
  2. 跳转到 Scope2Activity 先显示原有值，修改后返回。由于 Scope1Activity 没有销毁，所以在 onResume 显示了新值。
  3. 返回 MainActivity ，由于 scope 特性，此时已经获取不到相应的值了。
- 
+----
+
+**Demo 地址：** https://github.com/joker-fu/sample_koin
